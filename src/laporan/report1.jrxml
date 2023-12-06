@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="71ab42ac-be7a-470d-95cc-e6cb099b2ae8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="username" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tb_req_truk.`id_req` AS tb_req_truk_id_req,
+     tb_req_truk.`no_pol` AS tb_req_truk_no_pol,
+     tb_req_truk.`jenis_truk` AS tb_req_truk_jenis_truk,
+     tb_req_truk.`dari` AS tb_req_truk_dari,
+     tb_req_truk.`sampai` AS tb_req_truk_sampai,
+     tb_req_truk.`rute` AS tb_req_truk_rute,
+     tb_req_truk.`keterangan` AS tb_req_truk_keterangan,
+     tb_req_truk.`tgl_req` AS tb_req_truk_tgl_req
+FROM
+     `tb_req_truk` tb_req_truk]]>
+	</queryString>
+	<field name="tb_req_truk_id_req" class="java.lang.String"/>
+	<field name="tb_req_truk_no_pol" class="java.lang.String"/>
+	<field name="tb_req_truk_jenis_truk" class="java.lang.String"/>
+	<field name="tb_req_truk_dari" class="java.lang.String"/>
+	<field name="tb_req_truk_sampai" class="java.lang.String"/>
+	<field name="tb_req_truk_rute" class="java.lang.String"/>
+	<field name="tb_req_truk_keterangan" class="java.lang.String"/>
+	<field name="tb_req_truk_tgl_req" class="java.lang.String"/>
+	<variable name="username" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="43" uuid="145fde3f-8692-41be-a47b-6bc9679ab9fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. KALIBARU JAYA ABADI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="555" height="24" uuid="2e2c57ae-33d2-4ac2-ac5d-9a5c8cf4b06d"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PERMINTAAN UNIT TRUK]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="4b5184c0-5a02-4543-8463-dd78f94a9579"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{username}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="50" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="4b2b0ec1-c715-428c-9033-a5f7b8ae883e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="0" width="69" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="91f3ae48-9fee-4cf4-832c-424c9b972f96"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Pol]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="119" y="0" width="69" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="03dd564e-2fb0-44d0-89b3-03ad34964df1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Truk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="188" y="0" width="56" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="eb38df77-271f-46a5-bdee-474f8988a7f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dari Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="244" y="0" width="57" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="6905c391-b10c-462a-a09c-929f47262b52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sampai Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="301" y="0" width="103" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="2a62fa84-97c3-4882-a1ed-72f96b80ac8e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rute]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="404" y="0" width="80" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="e6832af2-11fc-43f7-a630-12c3bac96f0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="484" y="0" width="71" height="32" forecolor="#FFFFFF" backcolor="#333300" uuid="4ec01e83-ff85-4a1c-b672-de76b9636df0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Permintaan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="d07f32b1-b651-4b1c-abe5-f7286550cddd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_id_req}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="69" height="20" uuid="4fbffa6e-0d7c-4428-86dc-42ad971ecfac"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_no_pol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="69" height="20" uuid="8f38ef09-4679-4255-aa38-cd8f989ad75d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_jenis_truk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="0" width="56" height="20" uuid="9ea90562-5561-4a08-a204-f53d8ae221aa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_dari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="57" height="20" uuid="5923f762-de84-40d3-b01a-a20ad4ece2a2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_sampai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="0" width="103" height="20" uuid="215cd3de-47d4-475c-96fc-ea170a906c2e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_rute}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="80" height="20" uuid="747fbde8-2447-4ec4-ad23-f38674ac975a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_keterangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="71" height="20" uuid="5778f182-7b08-45e7-ad33-fc538d7b2c81"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tb_req_truk_tgl_req}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="be4fc01e-00c9-4848-a95a-b56c4b81fc13"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="384" y="14" width="47" height="15" uuid="4a1ea737-5e17-469f-a68f-e78071a506a7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="434" y="13" width="111" height="20" uuid="56705e09-e6b1-4de0-a173-de0a99436421"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="293" y="16" width="100" height="20" uuid="80ff84ae-6f73-4f49-8bad-d7c3a9e58bbf"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
